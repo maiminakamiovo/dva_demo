@@ -1,31 +1,70 @@
-# README
+# Getting Started with Create React App
 
-开始搭建服务
- 1.在 src/servers 创建文件
-  servers/XXX.JS 某一个模块的接口地址比如 productServers.js 这是源于商品类的请求方法 请求地址 userServer.js 这是关于用户类的请求方法
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-2.
- 创建 Model.js productModel.js ...这里的model 等同于后台和页面展示的中间件
- 数据池不同的父子组件可通过 connect 链接相同的 namespace 得到相同的数据
+## Available Scripts
 
-一个组件可以链接多个 namespace 数据池
+In the project directory, you can run:
 
-export default connect(({ a,b }) => ({ a, b, }))(Index)
+### `npm start`
 
-这里连接了 a 和 b 两个不同的 namespace 可以获取到两个数据池里的数据
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-loading: loading.effects['current/addInitdata'] || false,
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-可以用于页面的加载 loading 在请求 addInitdata 方式时会设置为 true 请求完之后则会设置为 false
+### `npm test`
 
-3.页面的使用通过 dispatch({})来调取接口 
-dispatch({ 
-    type:"current/queryUserfunc",
-    payload:{...},
-    callback:res=>{}
- })
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-这里请求了 namespace 为 current 的 model 下的 queryUserfunc 方法
- type model/方法 
- payload 请求的数据 id 等.. 
- callback 请求之后的回调 可返回后台返回的数据
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
